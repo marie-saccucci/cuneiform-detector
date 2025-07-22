@@ -1,9 +1,12 @@
 fastapi
 uvicorn[standard]
-torch
+torch==2.0.1+cpu
+torchvision==0.15.2+cpu
+torchaudio==2.0.2+cpu
 numpy
 Pillow
 opencv-python-headless
 segmentation-models-pytorch
 albumentations
 albumentations[imgaug]
+-f https://download.pytorch.org/whl/cpu/torch_stable.html
