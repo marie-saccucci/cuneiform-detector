@@ -1,9 +1,9 @@
 fastapi
-uvicorn
-pillow
+uvicorn[standard]
 torch
 numpy
-opencv-python
+Pillow
+opencv-python-headless
 segmentation-models-pytorch
 albumentations
-python-multipart
+albumentations[imgaug]

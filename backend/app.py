@@ -31,7 +31,7 @@ transform = A.Compose([
 ])
 
 PATCH_SIZE = 512
-OVERLAP = 128  # tu peux ajuster ou mettre 0 si pas besoin
+OVERLAP = 128  
 
 
 def split_into_patches(img_np, patch_size=PATCH_SIZE, overlap=OVERLAP):
