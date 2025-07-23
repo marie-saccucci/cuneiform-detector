@@ -1,6 +1,3 @@
-// ✅ Version complète avec Undo allégé (max 3), Ctrl+Z, et traits lissés
-// App.jsx (React + Konva + brush/eraser tools + zoom + undo)
-
 import React, { useRef, useState, useEffect } from 'react';
 import { Stage, Layer, Image as KonvaImage } from 'react-konva';
 import axios from 'axios';
