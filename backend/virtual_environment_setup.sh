@@ -7,11 +7,13 @@ echo "Activating virtual environment..."
 source venv/bin/activate
 
 echo "Upgrading pip..."
-pip install --upgrade pip
+python -m pip install --upgrade pip
 
 echo "Installing requirements..."
-pip install -r requirements.txt
+# Install CPU version of torch separately
+python -m pip install torch==2.1.0+cpu torchvision==0.16.0+cpu torchaudio==2.1.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+python -m pip install -r backend/requirements.txt
 
-echo ""
+echo
 echo "Virtual environment setup complete!"
 echo "To activate it later, run: source venv/bin/activate"
