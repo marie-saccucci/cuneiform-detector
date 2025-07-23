@@ -1,9 +1,9 @@
-fastapi
-uvicorn
-pillow
-torch
-numpy
-opencv-python
-segmentation-models-pytorch
-albumentations
-python-multipart
+fastapi==0.110.0
+uvicorn==0.27.1
+pillow==10.3.0
+torch==2.1.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+numpy==1.26.4
+opencv-python==4.9.0.80
+segmentation-models-pytorch==0.3.2
+albumentations==1.4.0
+python-multipart==0.0.9
