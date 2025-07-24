@@ -1,12 +1,9 @@
-fastapi
+fastapi==0.110.0
 uvicorn[standard]
-torch==2.0.1+cpu
-torchvision==0.15.2+cpu
-torchaudio==2.0.2+cpu
-numpy
-Pillow
-opencv-python-headless
-segmentation-models-pytorch
-albumentations
-albumentations[imgaug]
--f https://download.pytorch.org/whl/cpu/torch_stable.html
+pillow==10.3.0
+torch
+numpy==1.26.4
+opencv-python==4.9.0.80
+segmentation-models-pytorch==0.3.2
+albumentations==1.4.0
+python-multipart==0.0.9

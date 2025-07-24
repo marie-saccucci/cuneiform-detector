@@ -10,21 +10,6 @@ import cv2
 import segmentation_models_pytorch as smp
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
-import os
-import requests
-
-MODEL_URL = "https://huggingface.co/marie-saccucci/cuneiform-segmentation-unet/resolve/main/U_net_weights.pth"
-MODEL_PATH = "U_net_weights.pth"
-
-# Download model if not local
-if not os.path.exists(MODEL_PATH):
-    print("Downloading model weights...")
-    response = requests.get(MODEL_URL)
-    with open(MODEL_PATH, "wb") as f:
-        f.write(response.content)
-    print("Model downloaded.")
-
-
 
 app = FastAPI()
 
@@ -37,7 +22,7 @@ app.add_middleware(
 )
 
 model = smp.Unet(encoder_name="mobilenet_v2", encoder_weights="imagenet", classes=1, activation=None)
-model.load_state_dict(torch.load(MODEL_PATH, map_location="cpu"))
+model.load_state_dict(torch.load("U_net_weights.pth", map_location="cpu"))
 model.eval()
 
 transform = A.Compose([
@@ -46,7 +31,7 @@ transform = A.Compose([
 ])
 
 PATCH_SIZE = 512
-OVERLAP = 128  
+OVERLAP = 128  # tu peux ajuster ou mettre 0 si pas besoin
 
 
 def split_into_patches(img_np, patch_size=PATCH_SIZE, overlap=OVERLAP):

@@ -1,0 +1,23 @@
+# Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Backend
+*.py text eol=lf
+*.txt text
+*.md text
+*.json text eol=lf
+*.yml text eol=lf
+*.pth binary
+
+# Frontend
+*.js text eol=lf
+*.ts text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+
+# Assets
+*.png binary
+*.jpg binary
