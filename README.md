@@ -10,15 +10,17 @@ cuneiform-detector/
 ├── backend/ # FastAPI backend
 │ ├── app.py # Main FastAPI app
 │ ├── requirements.txt # Python dependencies
-│ ├── Procfile # For deployment (optional)
 │ ├── venv/ # Python virtual environment (not included in repo)
-│ └── virtual_environment_setup.{sh|bat} # Script to set up environment
+│ └── U_net_weights.pth (semantic segmentation model weights)
 │
 ├── frontend/ # React frontend
 │ ├── package.json # JavaScript dependencies
 │ └── ... # Frontend components
 │
+├── .gitattributes
+├── package-lock.json
 ├── run_app.{sh|bat} # Launch script (Linux or Windows)
+├── virtual_environment_setup.{sh|bat} # Script to set up environment 
 └── README.md # This file
 ```
 
