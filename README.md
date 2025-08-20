@@ -74,8 +74,6 @@ run_app.bat
 
 The FastAPI backend will run on http://127.0.0.1:8000
 
-The React frontend will run on http://localhost:3000
-
 
 ## License:
 The model was trained on electronic Babylonian Library data and is therefore under the license CC BY-NC-SA 4.0 (Attribution-NonCommercial-ShareAlike 4.0 International). 
