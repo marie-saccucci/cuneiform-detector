@@ -1,5 +1,3 @@
-// ✅ Version complète avec Undo allégé (max 3), Ctrl+Z, et traits lissés
-// App.jsx (React + Konva + brush/eraser tools + zoom + undo)
 
 import React, { useRef, useState, useEffect } from 'react';
 import { Stage, Layer, Image as KonvaImage } from 'react-konva';
@@ -16,7 +14,7 @@ export default function App() {
   const [isDrawing, setIsDrawing] = useState(false);
   const [zoom, setZoom] = useState(1);
   const [history, setHistory] = useState([]);
-
+  const [originalFileName, setOriginalFileName] = useState(null);
   const stageRef = useRef();
   const canvasRef = useRef(null);
   const updateTimeout = useRef(null);
@@ -36,6 +34,8 @@ export default function App() {
   const handleUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
+
+    setOriginalFileName(file.name); 
 
     const reader = new FileReader();
     reader.onload = async () => {
@@ -226,7 +226,12 @@ export default function App() {
 
     ctx.putImageData(imageData, 0, 0);
     const link = document.createElement('a');
-    link.download = 'edited_mask.png';
+    let filename = 'edited_mask.png';
+    if (originalFileName) {
+      filename = originalFileName.replace(/\.[^/.]+$/, '') + '.png';
+    }
+
+    link.download = filename;
     link.href = canvas.toDataURL();
     link.click();
   };
