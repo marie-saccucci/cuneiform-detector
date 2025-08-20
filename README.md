@@ -40,11 +40,11 @@ Open a terminal and run the setup script:
 
 * On Windows:
 ```
-backend\virtual_environment_setup.bat
+virtual_environment_setup.bat
 ```
 * On Linux/macOs
 ```
-./backend/virtual_environment_setup.sh
+./virtual_environment_setup.sh
 ```
 This will:
 
