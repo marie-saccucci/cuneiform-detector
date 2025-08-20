@@ -27,12 +27,20 @@ cuneiform-detector/
 ## Requirements
 
 - Python 3.9+ installed
-- Node.js + npm installed
+- Node.js 18+ + npm installed
 - (Recommended) Use a virtual environment for Python
 
 ---
 
 ## Setup
+
+### Executable files on Linux
+
+In a terminal
+```
+chmod +x virtual_environment_setup.sh
+chmod +x run_app.sh
+```
 
 ### Backend (Python)
 
@@ -53,7 +61,7 @@ This will:
 
 ### Frontend
 
-Install the java scripts dependencies in the frontend.
+Install the JavaScript dependencies in the frontend.
 ```
 cd frontend
 npm install
@@ -72,7 +80,10 @@ run_app.bat
 ./run_app.sh
 ```
 
+This script runs the backend (uvicorn) and the frontend.
+
 The FastAPI backend will run on http://127.0.0.1:8000
+The Vite frontend runs on http://localhost:5173/cuneiform-detector/
 
 
 ## License:
