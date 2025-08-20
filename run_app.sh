@@ -12,7 +12,7 @@ source venv/bin/activate
 uvicorn app:app --reload &
 
 # Running frontend
-cd ..\frontend 
+cd ../frontend 
 npm run dev
 
 # Wait for all background jobs (like uvicorn)
