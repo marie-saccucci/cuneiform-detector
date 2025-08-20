@@ -10,8 +10,6 @@ echo Upgrading pip...
 python -m pip install --upgrade pip
 
 echo Installing requirements...
-:: Install CPU version of torch separately
-pip install torch==2.1.0+cpu torchvision==0.16.0+cpu torchaudio==2.1.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 python -m pip install -r requirements.txt
 
 echo.
